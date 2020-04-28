@@ -22,6 +22,8 @@ for i in range(df.event_number.max()+1):
     
     trk_lengths.append(max(all_lengths))
 
+plt.figure(0)
 plt.hist(trk_lengths, range=(0,100), bins=50)
 plt.xlabel("Track length (mm)")
 plt.savefig("/data5/users/miryam/temp/voxel/img/voxel_track_length_1000keV_local.pdf")
+plt.close(0)
