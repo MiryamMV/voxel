@@ -9,6 +9,9 @@ from invisible_cities.reco import paolina_functions as plf
 
 df = pd.read_csv("data_1000keV_local.csv")
 
+mask = df.event_number < 10
+df   = df[mask]
+
 trk_lengths = []
 for i in range(df.event_number.max()+1):
     #df_i = df[df.event_number == i]
