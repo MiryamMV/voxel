@@ -7,9 +7,9 @@ from math import sqrt
 from invisible_cities.evm.event_model import BHit
 from invisible_cities.reco import paolina_functions as plf
 
-df = pd.read_csv("data_1000keV_local.csv")
+df = pd.read_csv("data/data_1000keV_local.csv", usecols=["event_number", "x", "y", "z"])
 
-mask = df.event_number < 10
+mask = df.event_number < 20
 df   = df[mask]
 
 trk_lengths = []
